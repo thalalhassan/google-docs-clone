@@ -1,12 +1,14 @@
 version: '3'
 services:
     client-app:
-        image: client-app
+        build: ./client
+        # image: client-app
         stdin_open: true
         ports: 
             -"3000:3000"
     server-app:
-        image: server-app
+        build: ./server
+        # image: server-app
         ports: 
             -"5000:5000"
         networks:
